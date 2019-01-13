@@ -1,9 +1,6 @@
-# 仿饿了么购物车效果
+# 蟹叔叔的前端启蒙课
 
-* 左右侧列表联动
-* 顶部吸附标题
-* 利用二次贝塞尔曲线做成下单特效等
+* 蟹叔叔教学视频的代码
+* 视频地址：[http://space.bilibili.com/15660014](http://space.bilibili.com/15660014)
 
-<img src="/picture/picture1.png?raw=true" width=360 height=640 alt="Quick Demo">
-<img src="/picture/picture2.png?raw=true" width=360 height=640 alt="Quick Demo">
-<img src="/picture/gif1.gif?raw=true" width=360 height=640 alt="horizontal_and_vertical_flip">
+<img src="https://qqadapt.qpic.cn/txdocpic/0/bad479f51bfc55a695f7b6d7b718cae0/0" alt="crab">
