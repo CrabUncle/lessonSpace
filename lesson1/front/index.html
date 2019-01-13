@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.js"></script>
+  <style>
+    button {
+      width: 300px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <button>点击我呀！！！</button>
+  <script>
+    /*
+    知识点：promise, async/await
+    故事背景介绍：
+    1、验证有没有中将；
+    2、领取奖金5000元；
+    3、把5000元存到银行；
+    4、查看新余额。
+    */
+
+    $('button').click(() => {
+      test4()
+    })
+
+    //********* 常规嵌套版 *************
+    function test1() {
+      $.get('http://localhost:3000/checkNum?num=123456', res => {
+        if (res == 1) {
+          $.get('http://localhost:3000/getBonus', res => {
+            $.get('http://localhost:3000/setMoney?money=' + res, res => {
+              $.get('http://localhost:3000/getMoney', res => {
+                console.log(res)
+              })
+            })
+          })
+        }
+      })
+    }
+
+    //********* ajax关闭异步版 *************
+    function test2() {
+      $.ajaxSettings.async = false
+      var res1 = $.get('http://localhost:3000/checkNum?num=123456').responseJSON
+      if (res1 == 1) {
+        var res2 = $.get('http://localhost:3000/getBonus').responseJSON
+        var res3 = $.get('http://localhost:3000/setMoney?money=' + res2).responseJSON
+        var res4 = $.get('http://localhost:3000/getMoney').responseJSON
+        console.log(res4);
+      }
+    }
+
+    //********* Promise *************
+    function test3() {
+      var p = new Promise((rsv, rej) => {
+        $.get('http://localhost:3000/checkNum?num=123456', res => {
+          rsv(res)
+        })
+      })
+      var p2 = new Promise((rsv, rej) => {
+        $.get('http://localhost:3000/getBonus', res => {
+          rsv(res)
+        })
+      })
+      var p4 = new Promise((rsv, rej) => {
+        $.get('http://localhost:3000/getMoney', res => {
+          rsv(res)
+        })
+      })
+      p.then(res => p2)
+        .then(res => p3(res))
+        .then(res => p4)
+        .then(res => console.log(res))
+    }
+    function p3(money) {
+      return new Promise((rsv, rej) => {
+        $.get('http://localhost:3000/setMoney?money=' + money, res => {
+          rsv(res)
+        })
+      })
+    }
+
+    //********* async/await(力荐，最新--ES2017新增) *************
+    // await = ajax wait
+    async function test4() {
+      var res1 = await new Promise((rsv, rej) => {
+        $.get('http://localhost:3000/checkNum?num=123456', res => {
+          rsv(res)
+        })
+      })
+      if(res1 ==1){
+        var res2 = await new Promise((rsv, rej) => {
+          $.get('http://localhost:3000/getBonus', res => {
+            rsv(res)
+          })
+        })
+        var res3 = await new Promise((rsv, rej) => {
+          $.get('http://localhost:3000/setMoney?money='+res2, res => {
+            rsv(res)
+          })
+        })
+        var res4 = await new Promise((rsv, rej) => {
+          $.get('http://localhost:3000/getMoney', res => {
+            rsv(res)
+          })
+        })
+        console.log(res4);
+      }
+    }
+  </script>
+</body>
+
+</html>

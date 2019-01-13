@@ -1,0 +1,270 @@
+/*
+大致CSS顺序
+z-index
+position/display
+margin/padding
+width/height
+border/background
+font line-height color
+transition/animation/transform
+*/
+/*css reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body>div {
+  margin-bottom: 10px;
+}
+/*父元素有关flex的属性*/
+/* 最基础版 */
+.container1 {
+  display: flex;
+  width: 530px;
+  height: 150px;
+  border: 1px solid #000;
+}
+
+.container1>div {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  border: 1px solid #000;
+}
+
+/* justify-content */
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  /* space-around flex-start, flex-end center*/
+  width: 530px;
+  height: 150px;
+  border: 1px solid #000;
+}
+
+.container2>div {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  border: 1px solid #000;
+}
+
+/* align-items */
+.container3 {
+  display: flex;
+  justify-content: center;
+  /* flex-start, flex-end*/
+  align-items: center;
+  /*flex-start, flex-end*/
+  width: 530px;
+  height: 150px;
+  border: 1px solid #000;
+}
+
+.container3>div {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  border: 1px solid #000;
+}
+
+/* flex-direction */
+.container4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  /*row row-reverse column*/
+  width: 530px;
+  height: 400px;
+  border: 1px solid #000;
+}
+
+.container4>div {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  border: 1px solid #000;
+  font-size: 60px;
+  text-align: center;
+  line-height: 100px;
+}
+
+/*flex-wrap*/
+.container5 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  /*nowrap wrap*/
+  width: 530px;
+  height: 400px;
+  border: 1px solid #000;
+}
+
+.container5>div {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  border: 1px solid #000;
+  font-size: 60px;
+  text-align: center;
+  line-height: 100px;
+}
+
+/*flex-flow*/
+.container6 {
+  display: flex;
+  flex-flow: column-reverse wrap;
+  width: 530px;
+  height: 400px;
+  border: 1px solid #000;
+}
+
+.container6>div {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  border: 1px solid #000;
+  font-size: 60px;
+  text-align: center;
+  line-height: 100px;
+}
+
+/*align-content*/
+.container7 {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-around;
+  width: 530px;
+  height: 400px;
+  border: 1px solid #000;
+}
+
+.container7>div {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  border: 1px solid #000;
+  font-size: 60px;
+  text-align: center;
+  line-height: 100px;
+}
+
+/*子元素有关flex的属性*/
+/* order */
+.container8 {
+  display: flex;
+  width: 530px;
+  height: 400px;
+  border: 1px solid #000;
+}
+
+.container8>div {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  border: 1px solid #000;
+  font-size: 60px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.son1 {
+  order: 5;
+}
+
+.son5 {
+  order: 100;
+}
+
+/* flex-grow */
+.container9 {
+  display: flex;
+  width: 530px;
+  height: 400px;
+  border: 1px solid #000;
+}
+
+.container9>div {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  border: 1px solid #000;
+  font-size: 60px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.son-9-1 {
+  flex-grow: 1;
+}
+
+.son-9-2 {
+  flex-grow: 2;
+}
+
+.son-9-3 {
+  flex-grow: 3;
+}
+
+/*flex-shrink*/
+.container10 {
+  display: flex;
+  width: 530px;
+  height: 400px;
+  border: 1px solid #000;
+}
+
+.container10>div {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  border: 1px solid #000;
+  font-size: 60px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.son-10-1 {
+  flex-shrink: 0;
+}
+
+.son-10-2 {
+  flex-shrink: 1;
+}
+
+.son-10-3 {
+  flex-shrink: 2;
+}
+
+/*align-self*/
+.container11 {
+  display: flex;
+  align-items: flex-start;
+  width: 530px;
+  height: 400px;
+  border: 1px solid #000;
+}
+
+.container11>div {
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  border: 1px solid #000;
+  font-size: 60px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.son-11-1 {
+  align-self: center;
+}
+
+/*****************/
+/* 切记：最常用的：
+display:flex;
+justify-content
+align-items
+涵盖99.9%的使用情况
+*/
+/*****************/
