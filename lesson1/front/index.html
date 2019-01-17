@@ -81,7 +81,8 @@
         //   .then(res => p4)
         //   .then(res => console.log(res))
 
-        // 这种方式可以很好的解决上面的问题。
+        // 这种方式可以很好的解决上面的问题
+        // 既然一旦定义立即执行，那么我什么时候用，什么时候定义
         p.then(res => p2)
           .then(res => p3(res))
           .then(
