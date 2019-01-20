@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      input,
+      span {
+        display: block;
+      }
+      input {
+        margin-top: 20px;
+      }
+      input:first-child {
+        margin-top: 0px;
+      }
+      h1:hover::before {
+        content: attr(屎);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 15px;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="myH1" name="myName" class="my-h1-class" dog="秋田犬" v-model="myModel" ng-click="test" @click="test2" 屎="黄色的，臭臭的，你闻闻！">
+      hello
+    </h1>
+    <input type="text" id="myInput1" /> <span id="mySpan1"></span>
+    <input type="text" id="myInput2" /> <span id="mySpan2"></span>
+    <input type="text" id="myInput3" /> <span id="mySpan3"></span>
+    <input type="text" v-model="myInput4" /> <span>{{mySpan4}}</span>
+    <script src="play.js"></script>
+    <script>
+      /* var str  = document.getElementById('myH1').getAttributeNames()
+    console.log(str)
+    var str2  = document.getElementById('myH1').getAttribute('屎')
+    console.log(str2) */
+    </script>
+  </body>
+</html>
