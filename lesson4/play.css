@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body>div {
+  border: 1px solid #999;
+}
+
+body>div>div {
+  border: 1px solid #000;
+  background: #f00;
+  text-align: center;
+}
+
+/* 写在容器上的属性 */
+
+.container1 {
+  display: grid;
+  /* grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; */
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  /* grid-row-gap: 2px;
+  grid-column-gap: 5px; */
+  grid-gap: 5px 10px;
+}
+
+/* justify-content
+justify-items
+align-content
+align-items
+place-content
+place-items */
+
+.container2 {
+  display: grid;
+  grid-template: 50px 50px 50px / 50px 50px 50px;
+  width: 100%;
+  height: 170px;
+  /* justify-content: center; */
+  /* center start end  space-between space-around space-evenly */
+  /* align-content: center; */
+  /* justify-items: end; /* center start */
+  /* align-items: center; */
+  /* justify-items: ; */
+  place-content: center start;
+  place-items: center end;
+}
+
+.container2 div {
+  width: 20px;
+  height: 20px;
+}
+
+/* grid-template-area */
+
+/* 写在子元素身上的属性 */
+
+.container3 {
+  display: grid;
+  grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+}
+
+.container3 div {
+  padding: 15px;
+}
+
+.container3 .d1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.container3 .d2 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.container3 .d1 {
+  grid-row: 2/4;
+  grid-column: 3/4;
+}
+
+.container3 .d3 {
+  grid-area: 1/1/2/4;
+  /* row-start/column-start/row-end/column-end */
+}
+
+.container4 {
+  display: grid;
+  grid-template: repeat(20, 1fr)/ repeat(20, 1fr);
+}
+
+.container4 .d1 {
+  grid-area: 3/5/span 1/ span 16;
+}
+
+.container5 {
+  display: grid;
+  grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+}
+
+.container5 .d1 {
+  grid-area: 1/1/span 3/ span 3;
+}
+
+.container5 .d2 {
+  background: #00f;
+  grid-area: 1/1/span 2/ span 2;
+}
+
+.container5 .d3 {
+  background: #ff0;
+  grid-area: 1/1/span 1/ span 1;
+}
+
+.container5 .d4 {
+  background: #0f0;
+  grid-area: 2/2/span 2/ span 1;
+}
+
+.container6 {
+  display: grid;
+  grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+}
+
+.container6 .d1 {
+  grid-area: 2/2/3/3;
+}
+
+.container6 .d2 {
+  grid-area: 1/1/2/3;
+}
+
+.container6 .d3 {
+  grid-area: 1/3/3/4;
+}
+
+.container6 .d4 {
+  grid-area: 3/2/4/4;
+}
+
+.container6 .d5 {
+  grid-area: 2/1/4/2;
+}
+
+.container7 {
+  display: grid;
+  grid-template: repeat(3, auto)/ auto 50% auto;
+}
+
+.container7 .header {
+  grid-area: 1/1/2/4;
+  background: #00f;
+}
+
+.container7 .main {
+  grid-area: 2/2/3/3;
+  height: 100px;
+}
+
+.container7 .left, .container7 .right {
+  background: #f0f;
+}
+
+.container7 .footer {
+  grid-area: 3/1/4/4;
+  background: #ff0;
+}
+
+@media screen and (max-width:300px) {
+  .container7 {
+    grid-template: repeat(4, auto)/ auto auto;
+  }
+  .container7 .header {
+    grid-area: 1/1/2/3;
+  }
+  .container7 .footer {
+    grid-area: 2/1/3/3;
+  }
+  .container7 .main {
+    grid-area: 4/1/5/3;
+  }
+}
+
+@media screen and (max-width: 150px) {
+  .container7 {
+    grid-template: repeat(5, auto)/ auto;
+  }
+  .container7 .header {
+    grid-area: 1/1/2/2;
+  }
+  .container7 .footer {
+    grid-area: 2/1/3/2;
+  }
+  .container7 .left {
+    grid-area: 3/1/4/2;
+  }
+  .container7 .main {
+    grid-area: 5/1/5/2;
+  }
+}
+
+.container8 {
+  display: grid;
+  grid-template: repeat(3, auto)/ auto 50% auto;
+  grid-template-areas: 
+  "header header header"
+  "left main right"
+  "footer footer footer";
+}
+
+.container8 .header {
+  grid-area: header;
+  background: #00f;
+}
+
+.container8 .main {
+  grid-area: main;
+  height: 100px;
+}
+
+.container8 .left {
+  grid-area: left;
+  background: #f0f;
+}
+
+.container8 .right {
+  grid-area: right;
+  background: #f0f;
+}
+
+.container8 .footer {
+  grid-area: footer;
+  background: #ff0;
+}
+
+@media screen and (max-width:300px) {
+  .container8 {
+    grid-template: repeat(4, auto)/ auto auto;
+    grid-template-areas: 
+    "header header"
+    "footer footer"
+    "left right"
+    "main main";
+  }
+}
+
+@media screen and (max-width:150px) {
+  .container8 {
+    grid-template: repeat(5, auto)/ auto;
+    grid-template-areas: 
+    "header"
+    "footer"
+    "left"
+    "right"
+    "main";
+  }
+}
