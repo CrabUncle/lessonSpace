@@ -5,7 +5,7 @@
 
 <img src="banner.png" alt="crab">
 
-## 蟹叔叔的前端启蒙课
+### 课程目录 ###
 * lesson1: promise和async+await
 * lesson2: Flex系列
 * lesson3: 双向数据绑定系列
