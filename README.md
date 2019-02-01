@@ -10,3 +10,4 @@
 * lesson2: Flex系列
 * lesson3: 双向数据绑定系列
 * lesson4: Grid系列
+* lesson5: 正则表达式
