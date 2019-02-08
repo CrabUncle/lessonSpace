@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      body {
+        padding: 8px;
+        padding-bottom: 200px;
+      }
+      .luhan-list {
+        padding: 0 15px;
+      }
+      .luhan-list > div {
+        background: #f0f;
+        height: 100px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        text-align: center;
+        color: #fff;
+        font: bold 60px/100px 'KaiTi';
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">按钮</button>
+    <!-- default primary success info warning danger -->
+    <button class="btn btn-primary">按钮</button>
+    <button class="btn btn-success">按钮</button>
+    <button class="btn btn-info">按钮</button>
+    <button class="btn btn-warning">按钮</button>
+    <button class="btn btn-danger">按钮</button>
+    <button class="btn btn-danger disabled">按钮</button>
+    <hr />
+    <div class="btn btn-primary">按钮</div>
+    <span class="btn btn-primary">按钮</span>
+    <a class="btn btn-primary">按钮</a>
+    <input type="submit" class="btn btn-primary" />
+    <hr />
+    <!-- lg sm xs -->
+    <div class="btn btn-lg btn-primary">按钮</div>
+    <div class="btn btn-sm btn-primary">按钮</div>
+    <div class="btn btn-xs btn-primary">按钮</div>
+    <hr />
+    <div class="btn-group">
+      <button class="btn btn-primary">按钮</button>
+      <button class="btn btn-success">按钮</button>
+      <button class="btn btn-success">按钮</button>
+      <button class="btn btn-success">按钮</button>
+      <button class="btn btn-info">按钮</button>
+    </div>
+    <hr />
+    <p class="text-primary">这是一个段落这是一个段落</p>
+    <p class="text-success">这是一个段落这是一个段落</p>
+    <p class="text-info">这是一个段落这是一个段落</p>
+    <p class="text-warning">这是一个段落这是一个段落</p>
+    <p class="text-danger">这是一个段落这是一个段落</p>
+    <p class="text-muted">这是一个段落这是一个段落</p>
+    <p class="text-center">这是一个段落这是一个段落</p>
+    <p class="text-right text-success">这是一个段落这是一个段落</p>
+    <hr />
+    <span class="label label-default">萌妹子</span>
+    <span class="label label-primary">萌妹子</span>
+    <span class="label label-success">萌妹子</span>
+    <hr />
+    <span class="badge">5000</span>
+    <hr />
+    <div class="progress">
+      <div class="progress-bar" style="width:10%;"></div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-danger" style="width:80%;"></div>
+    </div>
+    <hr />
+    <span class="glyphicon glyphicon-heart" style="color:aqua;"></span>
+    <span class="glyphicon glyphicon-star" style="color:red;"></span>
+    <span class="glyphicon glyphicon-user" style="color:blue;"></span>
+    <span class="glyphicon glyphicon-ok"></span>
+    <span class="glyphicon glyphicon-plus"></span>
+    <span class="glyphicon glyphicon-remove"></span>
+    <span class="glyphicon glyphicon-edit"></span>
+    <span class="glyphicon glyphicon-search"></span>
+    <span class="glyphicon glyphicon-home"></span>
+    <span class="glyphicon glyphicon-refresh"></span>
+    <span class="glyphicon glyphicon-trash"></span>
+    <hr />
+    <div class="alert alert-danger">警告！</div>
+    <div class="alert alert-success">修改成功！</div>
+    <hr />
+    <div class="panel panel-primary">
+      <div class="panel-heading">面板标题</div>
+      <div class="panel-body">面板内容</div>
+    </div>
+    <div class="panel panel-success">
+      <div class="panel-heading">面板标题</div>
+      <div class="panel-body">面板内容</div>
+    </div>
+    <div class="panel panel-danger">
+      <div class="panel-heading">面板标题</div>
+      <div class="panel-body">面板内容</div>
+    </div>
+    <hr />
+    <div class="jumbotron">
+      <h1>欢迎光临！</h1>
+    </div>
+    <div class="well">lalalalal</div>
+    <hr />
+    <table class="table">
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>工作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>工作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>工作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>工作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+        <tr>
+          <td>鹿晗</td>
+          <td>29</td>
+          <td>歌手</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <!-- 你小时候什么样，长大还是什么样；
+    你长大什么样，小时候不一定什么样。 -->
+    <div class="row luhan-list">
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">鹿晗</div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">鹿晗</div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">鹿晗</div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">鹿晗</div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">鹿晗</div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">鹿晗</div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">鹿晗</div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">鹿晗</div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">鹿晗</div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">鹿晗</div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">鹿晗</div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">鹿晗</div>
+    </div>
+    <hr />
+    <div class="row luhan-list">
+      <div class="col-xs-6 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-0 col-lg-2 col-lg-offset-2">鹿晗</div>
+      <div class="col-xs-6 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-0 col-lg-2 col-lg-offset-4">鹿晗</div>
+    </div>
+  </body>
+</html>
