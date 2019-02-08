@@ -11,3 +11,4 @@
 * lesson3: 双向数据绑定系列
 * lesson4: Grid系列
 * lesson5: 正则表达式
+* lesson6: Bootstrap系列
